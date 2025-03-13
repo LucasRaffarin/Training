@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coucou toi ! N'hésite pas à me contacter !</title>
+</head>
+<body>
+    <script>
+        const solution = Math.floor(Math.random() * 11)     
+        let essais = 3;
+
+        function isRight(n) {
+            return solution === n;
+        }
+
+        function guess() {
+            const promptguess = prompt("Choisissez un chiffre") * 1;
+            return isRight(promptguess);
+        }
+
+        for (let i = 0; i < essais; i++) {  // Boucle qui tourne tant que i < essais
+            if (guess()) {
+                console.log(`Félicitations ! Vous avez trouvé en ${i + 1} essais.`);
+                break;  // On sort de la boucle si la réponse est correcte
+            } else if (i === essais - 1) {  // Si c'est le dernier essai
+                console.log("Vous avez perdu :(");
+            } else {
+                console.log(`Navré. Il vous reste ${essais - (i + 1)} essais.`);
+            }
+        }
+    </script>
+</body>
+</html>
