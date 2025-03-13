@@ -8,14 +8,12 @@
 <body>
     <script>
         function isPalindrome() {
-            const promptpalindrome = "kayak"
-            promptpalindrome.split
-            promptpalindrome.reverse
-            promptpalindrome.join
-            return promptpalindrome === promptpalindrome.toUpperCase
-        } // Renvoie true si c'est vrai sinon false
+            const promptpalindrome = "kayak";
+            const reversed = promptpalindrome.split("").reverse().join(""); // Inversion du mot
+            return promptpalindrome === reversed; // Comparaison
+        }
 
-        isPalindrome()
+        console.log(isPalindrome()); // Doit renvoyer true
     </script>
 </body>
 </html>
