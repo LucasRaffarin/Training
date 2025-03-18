@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coucou toi ! N'hésite pas à me contacter !</title>
+</head>
+<body>
+    <script>
+        const students = [
+            {
+                name: 'John',
+                notes: [1, 20, 18, 19, 12]
+            },
+            {
+                name: 'Jane',
+                notes: [17, 18, 20, 13, 15]
+            },
+            {
+                name: 'Sophie',
+                notes: [17, 12, 14, 15, 13]
+            },
+            {
+                name: 'Marc',
+                notes: [2, 3, 5, 8, 9]
+            },
+            {
+                name: 'Manon',
+                notes: [18, 17, 18, 19, 12]
+            }
+        ]
+
+        for ( i= 0; i < students.length; i++) {
+            let sommenotes = 0
+
+            for (let j = 0; j < students[i].notes.length; j++) {
+                sommenotes += students[i].notes[j];  // 2. Additionne toutes les notes
+            }
+
+            students[i].moyenne = sommenotes / students[i].notes.length
+            console.log(students[i].best = Math.max(...students[i].notes)) // Meilleure note
+            console.log(students[i].worst = Math.min(...students[i].notes)) // Pire note
+        }
+
+        
+    </script>
+</body>
+</html>
